@@ -462,7 +462,7 @@ static int refdb_reftable_write(
 	}
 
 	if ((error = git_repository_refdb__weakptr(&refdb, backend->repo)) < 0 ||
-	    (error = git_refdb_should_write_reflog(&write_reflog, refdb, refname)) < 0)
+	    (error = git_refdb_should_write_reflog(&write_reflog, refdb, ref)) < 0)
 		goto out;
 
 	if (write_reflog) {
